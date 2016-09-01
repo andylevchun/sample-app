@@ -1,0 +1,19 @@
+body {
+  margin-top: 80px; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #000;
+  background-color: #fff;
+  z-index: 1; }
+  header ul {
+    list-style: none; }
+    header ul li {
+      display: inline-block; }
+
+footer {
+  border: 1px solid #000;
+  width: 100%; }

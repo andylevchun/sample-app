@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/app/css/main.css') }}" />
+    </head>
+    <body>
+    <header class="header">
+        <div class="menu">
+            <h1>Acme Store</h1>
+            <button class="nav-mobile">Menu</button>
+            <ul class="nav">
+                <li>MenuItem 1</li>
+                <li>MenuItem 2</li>
+                <li>MenuItem 3</li>
+                <li>MenuItem 4</li>
+                <li>MenuItem 5</li>
+                <li>MenuItem 6</li>
+                <li>MenuItem 7</li>
+                <li>MenuItem 8</li>
+                <li>MenuItem 9</li>
+                <li>MenuItem 10</li>
+                <li>MenuItem 11</li>
+                <li>MenuItem 12</li>
+            </ul>
+            <ul class="nav--checkout">
+                <li>
+                    <a href="/cart"><img src="https://maxcdn.icons8.com/Android/PNG/512/Shopping/shopping_cart-512.png" title="Go to Checkout"><span class="cart">0</span></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        {% block body %}{% endblock %}
+    </div>
+
+    <footer>
+        Copyrights
+    </footer>
+
+        <script   src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+        <script   src="{{ asset('bundles/app/js/main.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+
+    </body>
+</html>

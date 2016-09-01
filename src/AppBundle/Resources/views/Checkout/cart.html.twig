@@ -1,0 +1,104 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Checkout:cart{% endblock %}
+
+{% block body %}
+<h1 class="page__title">Welcome to the Checkout:cart page</h1>
+
+<div class="section">
+	<form action="/" method="post" class="form form--validate" novalidate>
+		<h2 class="section__title">Delivery Address</h2>
+
+		<label>First Name</label>
+		<input type="text" name="firstname" class="name" value=""/>
+
+		<label>Last Name</label>
+		<input type="text" name="lastname" class="name" value=""/>
+
+		<label>E-mail</label>
+		<input type="email" name="email" value=""/>
+
+		<label>Phone</label>
+		<input type="tel" name="phone" value=""/>
+
+		<label>Address cont...</label>
+		<input type="text" name="address" value=""/>
+
+		<label>Zip Code</label>
+		<input type="text" name="zip" value=""/>
+
+		<label>City</label>
+		<input type="text" name="city" class="name" value=""/>
+
+		<label>State</label>
+		<input type="text" name="state" class="name" value=""/>
+
+		<label>Country</label>
+		<select name="country">
+			<option value="us">United States</option>
+			<option value="uk">United Kingdom</option>
+		</select><br>
+
+
+		<h2 class="section__title">Payment</h2>
+
+		<label>Card number</label>
+		<input type="number" name="cardnumber" class="creditcard" value=""/>
+
+		<label>Card holder</label>
+		<input type="text" name="cardholder" class="name" value=""/>
+
+		<label>Cvc</label>
+		<input type="password" name="cardnumber" value=""/>
+
+		<input type="submit" name="submit-checkout" class="button__submit" value="Checkout"/>
+	</form>
+</div>
+
+<div class="section section--short">
+	<h2 class="section__title">Order</h2>
+	<div class="order"> 		
+		<div class="order__list--colored">
+			<ul class="order__list order__list--short">
+				<li>
+					<h3 class="order__list--product">Acme Product</h3>
+				</li>
+				<li class="clearfix">
+					<span class="order__item--name push--left">Qty</span>
+					<span class="order__item--value push--right">
+						<span class="cart">0</span>
+					</span>
+				</li>
+
+				<li class="clearfix">
+					<span class="order__item--name push--left">Price</span>
+					<span class="order__item--value push--right">$00</span>
+				</li>
+			</ul>
+		</div>
+
+		<ul class="order__list order__list--overline">
+				<li class="clearfix">
+					<span class="order__item--name push--left">Subtotal</span>
+					<span class="order__item--value push--right">$00,000</span>
+				</li>
+
+				<li class="clearfix">
+					<span class="order__item--name push--left">Tax</span>
+					<span class="order__item--value push--right">$00</span>
+				</li>
+
+				<li class="clearfix">
+					<span class="order__item--name push--left">Shipping</span>
+					<span class="order__item--value push--right">$05</span>
+				</li>
+
+				<li class="clearfix">
+					<span class="order__item--total push--left">Total</span>
+					<span class="order__item--value push--right">$00,000</span>
+				</li>
+			</ul>
+	</div>
+</div>
+
+{% endblock %}
